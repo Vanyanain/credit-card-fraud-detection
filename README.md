@@ -6,15 +6,20 @@ Overview:
 Our objective is to create the classifier for credit card fraud detection. To do it, we'll compare classification models from different methods :
 
 Logistic regression
+
 Support Vector Machine
+
 Bagging (Random Forest)
+
 Boosting (XGBoost)
+
 Neural Network (tensorflow/keras)
+
 Dataset:
 
 Credit Card Fraud Detection
 
-The datasets contains transactions made by credit cards in September 2013 by european cardholders. This dataset presents transactions that occurred in two days, where we have 492 frauds out of 284,807 transactions. The dataset is highly unbalanced, the positive class (frauds) account for 0.172% of all transactions. I decided to proceed to an undersampling strategy to re-balance the class.
+The datasets contains transactions made by credit cards in September 2020 by Indian cardholders. This dataset presents transactions that occurred in two days, where we have 492 frauds out of 284,807 transactions. The dataset is highly unbalanced, the positive class (frauds) account for 0.172% of all transactions. I decided to proceed to an undersampling strategy to re-balance the class.
 
 It contains only numerical input variables which are the result of a PCA transformation. Unfortunately, due to confidentiality issues, we cannot provide the original features and more background information about the data.
 
@@ -36,6 +41,7 @@ Although simple and effective, a limitation of this technique is that examples a
 
 
 For undersampling, we can use the package imblearn with RandomUnderSampler function.
+
 import imblearn
 from imblearn.under_sampling import RandomUnderSampler 
 undersample = RandomUnderSampler(sampling_strategy=0.5)
