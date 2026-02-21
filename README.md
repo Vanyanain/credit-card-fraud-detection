@@ -41,25 +41,36 @@ Because fraud accounts for only 0.17% of transactions:
 - False negatives are extremely costly  
 
 To address this, **Random Undersampling** was applied to rebalance the dataset.
-
-```python
 from imblearn.under_sampling import RandomUnderSampler
 
 undersample = RandomUnderSampler(sampling_strategy=0.5)
-🧠 Algorithms Implemented
+## 🧠 Algorithms Implemented
+
 This project compares classical ML, boosting techniques, and deep learning architectures.
-🔹 Traditional Machine Learning Models
+
+###🔹 Traditional Machine Learning Models
 • Logistic Regression
+
 Baseline linear classifier
+
 Improved performance after feature scaling
+
 • Support Vector Machine (SVM)
+
 Effective in high-dimensional feature space
+
 Captures complex decision boundaries
+
 • Decision Tree
+
 Handles non-linear relationships
+
 Interpretable model structure
+
 • Random Forest (Bagging)
+
 Ensemble learning method
+
 Reduces overfitting
 Strong performance on structured tabular data
 🔹 Gradient Boosting Model
