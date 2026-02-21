@@ -1,134 +1,118 @@
-Credit Card Fraud Detection | End-to-End Machine Learning Project
-
-
-Overview:
-
-Our objective is to create the classifier for credit card fraud detection. To do it, we'll compare classification models from different methods :
-
-Logistic regression
-
-Support Vector Machine
-
-Bagging (Random Forest)
-
-Boosting (XGBoost)
-
-Neural Network (tensorflow/keras)
-
-Dataset:
-
-Credit Card Fraud Detection
-
-The datasets contains transactions made by credit cards in September 2020 by Indian cardholders. This dataset presents transactions that occurred in two days, where we have 492 frauds out of 284,807 transactions. The dataset is highly unbalanced, the positive class (frauds) account for 0.172% of all transactions. I decided to proceed to an undersampling strategy to re-balance the class.
-
-It contains only numerical input variables which are the result of a PCA transformation. Unfortunately, due to confidentiality issues, we cannot provide the original features and more background information about the data.
-Data Exploration:
-
-Only 492 (or 0.172%) of transaction are fraudulent. That means the data is highly unbalanced with respect with target variable Class.
-
-The dataset is highly imbalanced ! It's a big problem because classifiers will always predict the most common class without performing any analysis of the features and it will have a high accuracy rate, obviously not the correct one. To change that, I will proceed to random undersampling.
-
-The simplest undersampling technique involves randomly selecting examples from the majority class and deleting them from the training dataset. This is referred to as random undersampling.
-
-Although simple and effective, a limitation of this technique is that examples are removed without any concern for how useful or important they might be in determining the decision boundary between the classes. This means it is possible, or even likely, that useful information will be deleted.
-
-For undersampling, we can use the package imblearn with RandomUnderSampler function.
-
-import imblearn
-from imblearn.under_sampling import RandomUnderSampler 
+💳 Credit Card Fraud Detection
+End-to-End Machine Learning + Transformer-Based System
+📌 Overview
+This project builds a complete end-to-end fraud detection system to classify credit card transactions as fraudulent or legitimate.
+To solve this highly imbalanced real-world financial problem, multiple approaches were implemented and compared:
+Traditional Machine Learning models
+Gradient Boosting (LightGBM)
+Transformer-based Deep Learning architecture
+The objective was to maximize fraud detection performance while minimizing false negatives.
+📊 Dataset
+Total transactions: 284,807
+Fraudulent transactions: 492
+Fraud rate: 0.172%
+Highly imbalanced dataset
+The dataset contains only numerical features obtained through PCA transformation due to confidentiality.
+Target variable:
+0 → Legitimate transaction
+1 → Fraudulent transaction
+🔎 Problem Challenge
+Because fraud accounts for only 0.17% of transactions:
+Accuracy becomes misleading
+Models tend to predict majority class
+False negatives are extremely costly
+To address this, Random Undersampling was applied to rebalance the dataset.
+from imblearn.under_sampling import RandomUnderSampler
 undersample = RandomUnderSampler(sampling_strategy=0.5)
-
-This project demonstrates:
-
-Strong ML fundamentals
-Data preprocessing expertise
-Imbalanced data handling
-Model comparison & evaluation
-Production-ready model saving
-
-
-🎯 Business Problem
-
-Credit card fraud causes significant financial losses.
-The challenge is:
-Fraud transactions represent only ~0.17% of total data
-Traditional accuracy metrics are misleading
-False negatives are costly
-The objective was to build models that effectively identify fraud transactions while handling extreme class imbalance.
-
-🛠️ Tech Stack
-
-Python
-Scikit-learn
-XGBoost
-TensorFlow / Keras
-Imbalanced-learn
-Pandas & NumPy
-Matplotlib & Seaborn
-Joblib (Model Persistence)
-🔍 Key Technical Contributions
-
-✅ Data Engineering
-
-Removed non-informative features
-Standardized transaction amount using StandardScaler
-Created engineered feature: std_Amount
-Visualized class imbalance
-Applied Random UnderSampling to balance dataset
-
-✅ Model Development
-
-Implemented and compared multiple algorithms:
-Logistic Regression
-Support Vector Machine (SVM)
-Random Forest
-XGBoost
-MLP Classifier
-Artificial Neural Network (Keras)
-
-✅ Model Evaluation Strategy
-
-Since dataset is highly imbalanced, prioritized:
-Recall (Fraud Detection Rate)
+🧠 Algorithms Implemented
+This project compares classical ML, boosting techniques, and deep learning architectures.
+🔹 Traditional Machine Learning Models
+• Logistic Regression
+Baseline linear classifier
+Improved performance after feature scaling
+• Support Vector Machine (SVM)
+Effective in high-dimensional feature space
+Captures complex decision boundaries
+• Decision Tree
+Handles non-linear relationships
+Interpretable model structure
+• Random Forest (Bagging)
+Ensemble learning method
+Reduces overfitting
+Strong performance on structured tabular data
+🔹 Gradient Boosting Model
+• LightGBM (Light Gradient Boosting Machine)
+Fast training speed
+Handles large datasets efficiently
+Excellent performance on imbalanced data
+Leaf-wise tree growth strategy
+Memory efficient and highly optimized
+LightGBM significantly improved predictive performance compared to basic tree models.
+🔹 Advanced Deep Learning Model
+• Transformer-Based Neural Network
+Implemented a Transformer architecture adapted for tabular fraud detection.
+Key Components:
+Multi-Head Self-Attention
+Positional Encoding
+Feed-Forward Layers
+Layer Normalization
+Dropout Regularization
+The Transformer captures complex feature interactions and enhances fraud pattern recognition through attention mechanisms.
+⚙️ Data Engineering & Preprocessing
+✔ Removed non-informative features
+✔ Standardized transaction amount using StandardScaler
+✔ Engineered scaled feature (std_Amount)
+✔ Visualized fraud distribution
+✔ Applied Random Undersampling
+✔ Train-Test split (80/20)
+📊 Model Evaluation Strategy
+Due to extreme class imbalance, the following metrics were prioritized:
+Recall (Primary metric – Fraud Detection Rate)
 Precision
 F1 Score
 ROC-AUC Score
 Precision-Recall Curve
-Confusion Matrix Analysis
-
-📊 Performance Highlights
-
-Improved fraud detection using balanced dataset
-Logistic Regression performed efficiently after scaling
-Tree-based models handled non-linearity effectively
-ROC-AUC used as primary performance metric
-Best-performing model saved for deployment readiness
-
-📂 Project Pipeline
-
-Data Loading → Cleaning → Scaling → Handling Imbalance →
-Train-Test Split → Model Training → Evaluation →
-ROC & PR Curve Analysis → Model Saving
-
-💡 Why This Project Stands Out
-
-✔ Demonstrates understanding of real-world financial risk problems
+Confusion Matrix
+Accuracy alone was not used as a primary evaluation metric.
+📂 End-to-End Pipeline
+Data Loading
+→ Data Cleaning
+→ Feature Scaling
+→ Handling Class Imbalance
+→ Train-Test Split
+→ Model Training (ML + LightGBM + Transformer)
+→ Model Evaluation
+→ ROC & PR Curve Analysis
+→ Model Persistence
+📈 Why This Project Stands Out
+✔ Solves a real-world financial risk problem
 ✔ Handles extreme class imbalance properly
-✔ Uses multiple ML algorithms for comparison
-✔ Applies correct evaluation metrics beyond accuracy
-✔ Shows deployment readiness via model persistence
-
+✔ Compares multiple ML paradigms
+✔ Implements boosting + attention-based deep learning
+✔ Uses correct evaluation metrics beyond accuracy
+✔ Deployment-ready model saving
+🛠️ Tech Stack
+Python
+Pandas & NumPy
+Scikit-learn
+LightGBM
+XGBoost
+TensorFlow / Keras
+Imbalanced-learn
+Matplotlib & Seaborn
+Joblib
+▶️ How to Run
+git clone https://github.com/your-username/credit-card-fraud-detection.git
+cd credit-card-fraud-detection
+pip install -r requirements.txt
+jupyter notebook
 📈 Core Learning Outcomes
-
-Practical experience with imbalanced datasets
+Handling highly imbalanced datasets
 Importance of Recall in fraud detection
-Comparative model analysis
-Feature scaling impact on linear models
-Model interpretability via confusion matrix & ROC curves
-
+Comparative model performance analysis
+Boosting vs Bagging techniques
+Attention mechanisms in tabular data
+Model interpretability & evaluation
 👩‍💻 Author
 Vanya Nain
-
-Machine Learning & Data Science Enthusiast
-
-
+Machine Learning | Deep Learning | AI Enthusiast
