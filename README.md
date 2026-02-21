@@ -37,12 +37,15 @@ For undersampling, we can use the package imblearn with RandomUnderSampler funct
 import imblearn
 from imblearn.under_sampling import RandomUnderSampler 
 undersample = RandomUnderSampler(sampling_strategy=0.5)
+
 This project demonstrates:
 Strong ML fundamentals
 Data preprocessing expertise
 Imbalanced data handling
 Model comparison & evaluation
 Production-ready model saving
+
+
 🎯 Business Problem
 Credit card fraud causes significant financial losses.
 The challenge is:
@@ -50,6 +53,7 @@ Fraud transactions represent only ~0.17% of total data
 Traditional accuracy metrics are misleading
 False negatives are costly
 The objective was to build models that effectively identify fraud transactions while handling extreme class imbalance.
+
 🛠️ Tech Stack
 Python
 Scikit-learn
@@ -60,12 +64,14 @@ Pandas & NumPy
 Matplotlib & Seaborn
 Joblib (Model Persistence)
 🔍 Key Technical Contributions
+
 ✅ Data Engineering
 Removed non-informative features
 Standardized transaction amount using StandardScaler
 Created engineered feature: std_Amount
 Visualized class imbalance
 Applied Random UnderSampling to balance dataset
+
 ✅ Model Development
 Implemented and compared multiple algorithms:
 Logistic Regression
@@ -74,6 +80,7 @@ Random Forest
 XGBoost
 MLP Classifier
 Artificial Neural Network (Keras)
+
 ✅ Model Evaluation Strategy
 Since dataset is highly imbalanced, prioritized:
 Recall (Fraud Detection Rate)
@@ -82,33 +89,36 @@ F1 Score
 ROC-AUC Score
 Precision-Recall Curve
 Confusion Matrix Analysis
+
 📊 Performance Highlights
+
 Improved fraud detection using balanced dataset
 Logistic Regression performed efficiently after scaling
 Tree-based models handled non-linearity effectively
 ROC-AUC used as primary performance metric
 Best-performing model saved for deployment readiness
+
 📂 Project Pipeline
+
 Data Loading → Cleaning → Scaling → Handling Imbalance →
 Train-Test Split → Model Training → Evaluation →
 ROC & PR Curve Analysis → Model Saving
+
 💡 Why This Project Stands Out
 ✔ Demonstrates understanding of real-world financial risk problems
 ✔ Handles extreme class imbalance properly
 ✔ Uses multiple ML algorithms for comparison
 ✔ Applies correct evaluation metrics beyond accuracy
 ✔ Shows deployment readiness via model persistence
+
 📈 Core Learning Outcomes
+
 Practical experience with imbalanced datasets
 Importance of Recall in fraud detection
 Comparative model analysis
 Feature scaling impact on linear models
 Model interpretability via confusion matrix & ROC curves
-▶️ How to Run
-git clone https://github.com/your-username/credit-card-fraud-detection.git
-cd credit-card-fraud-detection
-pip install -r requirements.txt
-jupyter notebook
+
 👩‍💻 Author
 Vanya Nain
 Machine Learning & Data Science Enthusiast
