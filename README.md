@@ -1,5 +1,6 @@
 💳 Credit Card Fraud Detection
 End-to-End Machine Learning + Transformer-Based System
+
 📌 Overview
 This project builds a complete end-to-end fraud detection system to classify credit card transactions as fraudulent or legitimate.
 To solve this highly imbalanced real-world financial problem, multiple approaches were implemented and compared:
