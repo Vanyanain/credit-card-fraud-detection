@@ -39,6 +39,7 @@ from imblearn.under_sampling import RandomUnderSampler
 undersample = RandomUnderSampler(sampling_strategy=0.5)
 
 This project demonstrates:
+
 Strong ML fundamentals
 Data preprocessing expertise
 Imbalanced data handling
@@ -47,6 +48,7 @@ Production-ready model saving
 
 
 🎯 Business Problem
+
 Credit card fraud causes significant financial losses.
 The challenge is:
 Fraud transactions represent only ~0.17% of total data
@@ -55,6 +57,7 @@ False negatives are costly
 The objective was to build models that effectively identify fraud transactions while handling extreme class imbalance.
 
 🛠️ Tech Stack
+
 Python
 Scikit-learn
 XGBoost
@@ -66,6 +69,7 @@ Joblib (Model Persistence)
 🔍 Key Technical Contributions
 
 ✅ Data Engineering
+
 Removed non-informative features
 Standardized transaction amount using StandardScaler
 Created engineered feature: std_Amount
@@ -73,6 +77,7 @@ Visualized class imbalance
 Applied Random UnderSampling to balance dataset
 
 ✅ Model Development
+
 Implemented and compared multiple algorithms:
 Logistic Regression
 Support Vector Machine (SVM)
@@ -82,6 +87,7 @@ MLP Classifier
 Artificial Neural Network (Keras)
 
 ✅ Model Evaluation Strategy
+
 Since dataset is highly imbalanced, prioritized:
 Recall (Fraud Detection Rate)
 Precision
@@ -105,6 +111,7 @@ Train-Test Split → Model Training → Evaluation →
 ROC & PR Curve Analysis → Model Saving
 
 💡 Why This Project Stands Out
+
 ✔ Demonstrates understanding of real-world financial risk problems
 ✔ Handles extreme class imbalance properly
 ✔ Uses multiple ML algorithms for comparison
@@ -121,6 +128,7 @@ Model interpretability via confusion matrix & ROC curves
 
 👩‍💻 Author
 Vanya Nain
+
 Machine Learning & Data Science Enthusiast
 
 
