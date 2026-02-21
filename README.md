@@ -50,30 +50,23 @@ This project compares classical ML, boosting techniques, and deep learning archi
 
 ###🔹 Traditional Machine Learning Models
 • Logistic Regression
-
 Baseline linear classifier
-
 Improved performance after feature scaling
 
 • Support Vector Machine (SVM)
-
 Effective in high-dimensional feature space
-
 Captures complex decision boundaries
 
 • Decision Tree
-
 Handles non-linear relationships
-
 Interpretable model structure
 
 • Random Forest (Bagging)
-
 Ensemble learning method
-
 Reduces overfitting
 Strong performance on structured tabular data
-🔹 Gradient Boosting Model
+
+###🔹 Gradient Boosting Model
 • LightGBM (Light Gradient Boosting Machine)
 Fast training speed
 Handles large datasets efficiently
@@ -81,7 +74,8 @@ Excellent performance on imbalanced data
 Leaf-wise tree growth strategy
 Memory efficient and highly optimized
 LightGBM significantly improved predictive performance compared to basic tree models.
-🔹 Advanced Deep Learning Model
+
+###🔹 Advanced Deep Learning Model
 • Transformer-Based Neural Network
 Implemented a Transformer architecture adapted for tabular fraud detection.
 Key Components:
@@ -91,14 +85,16 @@ Feed-Forward Layers
 Layer Normalization
 Dropout Regularization
 The Transformer captures complex feature interactions and enhances fraud pattern recognition through attention mechanisms.
-⚙️ Data Engineering & Preprocessing
+
+##⚙️ Data Engineering & Preprocessing
 ✔ Removed non-informative features
 ✔ Standardized transaction amount using StandardScaler
 ✔ Engineered scaled feature (std_Amount)
 ✔ Visualized fraud distribution
 ✔ Applied Random Undersampling
 ✔ Train-Test split (80/20)
-📊 Model Evaluation Strategy
+
+##📊 Model Evaluation Strategy
 Due to extreme class imbalance, the following metrics were prioritized:
 Recall (Primary metric – Fraud Detection Rate)
 Precision
@@ -107,7 +103,8 @@ ROC-AUC Score
 Precision-Recall Curve
 Confusion Matrix
 Accuracy alone was not used as a primary evaluation metric.
-📂 End-to-End Pipeline
+
+##📂 End-to-End Pipeline
 Data Loading
 → Data Cleaning
 → Feature Scaling
@@ -117,14 +114,16 @@ Data Loading
 → Model Evaluation
 → ROC & PR Curve Analysis
 → Model Persistence
-📈 Why This Project Stands Out
+
+##📈 Why This Project Stands Out
 ✔ Solves a real-world financial risk problem
 ✔ Handles extreme class imbalance properly
 ✔ Compares multiple ML paradigms
 ✔ Implements boosting + attention-based deep learning
 ✔ Uses correct evaluation metrics beyond accuracy
 ✔ Deployment-ready model saving
-🛠️ Tech Stack
+
+##🛠️ Tech Stack
 Python
 Pandas & NumPy
 Scikit-learn
@@ -134,18 +133,15 @@ TensorFlow / Keras
 Imbalanced-learn
 Matplotlib & Seaborn
 Joblib
-▶️ How to Run
-git clone https://github.com/your-username/credit-card-fraud-detection.git
-cd credit-card-fraud-detection
-pip install -r requirements.txt
-jupyter notebook
-📈 Core Learning Outcomes
+
+##📈 Core Learning Outcomes
 Handling highly imbalanced datasets
 Importance of Recall in fraud detection
 Comparative model performance analysis
 Boosting vs Bagging techniques
 Attention mechanisms in tabular data
 Model interpretability & evaluation
-👩‍💻 Author
+
+## Author
 Vanya Nain
 Machine Learning | Deep Learning | AI Enthusiast
