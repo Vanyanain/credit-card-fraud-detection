@@ -1,29 +1,50 @@
-💳 Credit Card Fraud Detection
-End-to-End Machine Learning + Transformer-Based System
+# 💳 Credit Card Fraud Detection  
+## End-to-End Machine Learning + Transformer-Based System
 
-📌 Overview
-This project builds a complete end-to-end fraud detection system to classify credit card transactions as fraudulent or legitimate.
+---
+
+## 📌 Overview
+
+This project builds a complete end-to-end fraud detection system to classify credit card transactions as **fraudulent** or **legitimate**.
+
 To solve this highly imbalanced real-world financial problem, multiple approaches were implemented and compared:
-Traditional Machine Learning models
-Gradient Boosting (LightGBM)
-Transformer-based Deep Learning architecture
+
+- Traditional Machine Learning models  
+- Gradient Boosting (LightGBM)  
+- Transformer-based Deep Learning architecture  
+
 The objective was to maximize fraud detection performance while minimizing false negatives.
-📊 Dataset
-Total transactions: 284,807
-Fraudulent transactions: 492
-Fraud rate: 0.172%
-Highly imbalanced dataset
-The dataset contains only numerical features obtained through PCA transformation due to confidentiality.
-Target variable:
-0 → Legitimate transaction
-1 → Fraudulent transaction
-🔎 Problem Challenge
+
+---
+
+## 📊 Dataset
+
+- **Total transactions:** 284,807  
+- **Fraudulent transactions:** 492  
+- **Fraud rate:** 0.172%  
+- **Highly imbalanced dataset**
+
+The dataset contains only numerical features obtained through PCA transformation due to confidentiality constraints.
+
+**Target variable:**
+- `0` → Legitimate transaction  
+- `1` → Fraudulent transaction  
+
+---
+
+## 🔎 Problem Challenge
+
 Because fraud accounts for only 0.17% of transactions:
-Accuracy becomes misleading
-Models tend to predict majority class
-False negatives are extremely costly
-To address this, Random Undersampling was applied to rebalance the dataset.
+
+- Accuracy becomes misleading  
+- Models tend to predict the majority class  
+- False negatives are extremely costly  
+
+To address this, **Random Undersampling** was applied to rebalance the dataset.
+
+```python
 from imblearn.under_sampling import RandomUnderSampler
+
 undersample = RandomUnderSampler(sampling_strategy=0.5)
 🧠 Algorithms Implemented
 This project compares classical ML, boosting techniques, and deep learning architectures.
