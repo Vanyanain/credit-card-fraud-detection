@@ -48,7 +48,7 @@ undersample = RandomUnderSampler(sampling_strategy=0.5)
 
 This project compares classical ML, boosting techniques, and deep learning architectures.
 
-###🔹 Traditional Machine Learning Models
+🔹 Traditional Machine Learning Models
 • Logistic Regression
 Baseline linear classifier
 Improved performance after feature scaling
@@ -66,7 +66,7 @@ Ensemble learning method
 Reduces overfitting
 Strong performance on structured tabular data
 
-###🔹 Gradient Boosting Model
+🔹 Gradient Boosting Model
 • LightGBM (Light Gradient Boosting Machine)
 Fast training speed
 Handles large datasets efficiently
@@ -75,7 +75,7 @@ Leaf-wise tree growth strategy
 Memory efficient and highly optimized
 LightGBM significantly improved predictive performance compared to basic tree models.
 
-###🔹 Advanced Deep Learning Model
+🔹 Advanced Deep Learning Model
 • Transformer-Based Neural Network
 Implemented a Transformer architecture adapted for tabular fraud detection.
 Key Components:
@@ -86,7 +86,7 @@ Layer Normalization
 Dropout Regularization
 The Transformer captures complex feature interactions and enhances fraud pattern recognition through attention mechanisms.
 
-##⚙️ Data Engineering & Preprocessing
+## ⚙️ Data Engineering & Preprocessing
 ✔ Removed non-informative features
 ✔ Standardized transaction amount using StandardScaler
 ✔ Engineered scaled feature (std_Amount)
@@ -94,7 +94,7 @@ The Transformer captures complex feature interactions and enhances fraud pattern
 ✔ Applied Random Undersampling
 ✔ Train-Test split (80/20)
 
-##📊 Model Evaluation Strategy
+## 📊 Model Evaluation Strategy
 Due to extreme class imbalance, the following metrics were prioritized:
 Recall (Primary metric – Fraud Detection Rate)
 Precision
@@ -104,7 +104,7 @@ Precision-Recall Curve
 Confusion Matrix
 Accuracy alone was not used as a primary evaluation metric.
 
-##📂 End-to-End Pipeline
+## 📂 End-to-End Pipeline
 Data Loading
 → Data Cleaning
 → Feature Scaling
@@ -115,7 +115,7 @@ Data Loading
 → ROC & PR Curve Analysis
 → Model Persistence
 
-##📈 Why This Project Stands Out
+## 📈 Why This Project Stands Out
 ✔ Solves a real-world financial risk problem
 ✔ Handles extreme class imbalance properly
 ✔ Compares multiple ML paradigms
@@ -123,7 +123,7 @@ Data Loading
 ✔ Uses correct evaluation metrics beyond accuracy
 ✔ Deployment-ready model saving
 
-##🛠️ Tech Stack
+## 🛠️ Tech Stack
 Python
 Pandas & NumPy
 Scikit-learn
@@ -134,7 +134,7 @@ Imbalanced-learn
 Matplotlib & Seaborn
 Joblib
 
-##📈 Core Learning Outcomes
+## 📈 Core Learning Outcomes
 Handling highly imbalanced datasets
 Importance of Recall in fraud detection
 Comparative model performance analysis
