@@ -65,10 +65,14 @@ Following **RandomizedSearchCV**, **KerasTuner**, and **Threshold Optimization (
 
 ## 🛠️ Methodology & Tech Stack
 *   **Preprocessing:** `StandardScaler`, feature selection (removal of 'Time'), and `StratifiedShuffleSplit`.
+*   **Stability Fixes:** Implemented `StandardScaler` and `CalibratedClassifierCV` to prevent SVM crashes.
+*   **Feature Engineering:** Aligned all 8 models to a 29-feature input space (removing temporal noise).
 *   **Sampling:** Implementation of **Random Under-sampling (RUS)** on training data to balance the class distribution.
-*   **Architectures:** Logistic Regression, Linear SVM, Decision Trees, Random Forest, XGBoost, LightGBM, MLP, and Transformer.
+*   **Architectures:** Logistic Regression, Linear SVM, Random Forest, XGBoost, LightGBM, MLP, and Transformer.
+*   **Search Strategies:**
+    *   `RandomizedSearchCV` (XGB, LGBM, RF, SVM, LR)
+    *   `KerasTuner` (MLP, Transformer)
 *   **Evaluation:** Focus on **AUPRC (Area Under Precision-Recall Curve)** and **F1-Score** as the primary metrics for imbalanced classification.
-
 ---
 
 ## 👨‍💻 Author
